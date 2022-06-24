@@ -11,7 +11,7 @@ h1 {
 
 .turn{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgb(27, 3, 54);
+    color: rgb(188, 147, 236);
     font-size: 50px;
     text-align: center;
 }
@@ -30,7 +30,7 @@ h1 {
 .box{
     width: 100px;
     height: 100px;
-    background-color: rgb(49, 2, 35);
+    background-color: rgb(226, 158, 206);
     border: 3px solid white;
     color: white;
     font-size: 90px;
@@ -39,7 +39,7 @@ h1 {
 
 .main .box:not(.x):not(.circle):hover{
     cursor: pointer;
-    background-color: rgb(102, 72, 136);
+    background-color: rgb(180, 130, 237);
 }
 
 .main button{
