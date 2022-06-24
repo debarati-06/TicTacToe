@@ -1,4 +1,6 @@
-# THE TIC-TAC-TOE GAME
+# THE TIC-TAC-TOE GAME 
+LINK TO GAME - https://debarati-06.github.io/TicTacToe/
+
 This game has two modes:
 - Single Player 
 - Double Player
