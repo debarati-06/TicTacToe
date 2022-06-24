@@ -30,11 +30,6 @@ const scorewin=document.querySelector('[data-win]')
 const scoredraw=document.querySelector('[data-draw]')
 const scoreloose=document.querySelector('[data-loose]')
 
-// let clicksound = document.getElementById("clicksound"); 
-// let winsound = document.getElementById("winsound"); 
-// let playsound = document.getElementById("playsound"); 
-// let backgroundsound = document.getElementById("backgroundsound"); 
-
 const wincomb=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
 
 let cturn, doublegame=false, singlegame=false, scorew=0, scored=0, scorel=0
@@ -45,8 +40,6 @@ main.classList.add('hide')
 
 double.addEventListener('click',switchwindowd)
 function switchwindowd(){
-    // backgroundsound.play(); 
-    // clicksound.play(); 
     shape.classList.remove('hide')
     xoryes.innerText=`X`
     oorno.innerText=`O`
@@ -57,8 +50,6 @@ function switchwindowd(){
 
 single.addEventListener('click',switchwindows)
 function switchwindows(){
-    // backgroundsound.play();
-    // clicksound.play(); 
     shape.classList.remove('hide')
     xoryes.innerText=`Y`
     oorno.innerText=`N`
@@ -69,7 +60,6 @@ function switchwindows(){
 
 XorYesButton.addEventListener('click',switchwindowdX)
 function switchwindowdX(){
-    // clicksound.play(); 
     main.classList.remove('hide')
     shape.classList.add('hide')
     cturn=false
@@ -78,7 +68,6 @@ function switchwindowdX(){
 }
 OorNoButton.addEventListener('click',switchwindowdO)
 function switchwindowdO(){
-    // clicksound.play(); 
     main.classList.remove('hide')
     shape.classList.add('hide')
     cturn=true
@@ -107,7 +96,6 @@ function resetScore(){
 
 back.addEventListener('click',returntofront)
 function returntofront(){
-    // clicksound.play(); 
     doublegame=false
     singlegame=false
     turnmessage.innerText=``
@@ -116,7 +104,6 @@ function returntofront(){
 }
 back2.addEventListener('click',returntofront2)
 function returntofront2(){
-    // clicksound.play(); 
     doublegame=false
     singlegame=false
     shape.classList.add('hide')
@@ -125,8 +112,7 @@ function returntofront2(){
 
 restartb.addEventListener('click',startGame)
 
-function startGame(){
-    // clicksound.play(); 
+function startGame(){ 
     boxes.forEach(box =>{
         box.classList.remove(X_CLASS)
         box.classList.remove(CIRCLE_CLASS)
@@ -149,7 +135,6 @@ function startGame(){
 function clicking(e){ 
     const box = e.target
     if(!box.classList.contains(X_CLASS)&&!box.classList.contains(CIRCLE_CLASS)){
-        // playsound.play();
         if(doublegame){
             const currentClass= cturn?CIRCLE_CLASS:X_CLASS
             placeshape(box,currentClass)
@@ -233,7 +218,6 @@ function endgame(draw){
             }
         }
     }
-    // winsound.play()
     resultwindow.classList.add('show')
 }
 
